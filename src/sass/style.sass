@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css?family=Lato")
+
+$lato: "Lato", sans-serif
+$white1: #eee
+$white2: #f5f5f5
+$grey: #95989A
+$black: #424242
+$blue: #1E90B4
+
+body
+    background: $white1
+
+.container
+    display: block
+    position: relative
+    width: 100%
+    max-width: 900px
+    margin: 0 auto
+
+.header
+    display: block
+    position: relative
+    color: $grey
+    text-align: center
+    margin: 0 0 60px
+    font:
+        family: $lato
+        size: 18px
+        weight: 500
+
+.rating
+    display: block
+    position: relative
+    margin-left: auto
+    padding: 0
+    li
+        display: inline-block
+        position: relative
+        width: 14px
+        height: 14px
+        border-radius: 50%
+        margin-left: 8px
+        overflow: hidden
+        background: white
+        &::before
+            display: inline-block
+            position: relative
+            width: 100%
+            height: 100%
+            content: " "
+            border-radius: 50%
+        &.full::before
+            background: $blue
+        &.half::before
+            background: $blue
+            border-radius: 0
+            margin-left: -50%
+
+nav
+    display: flex
+    position: relative
+    background: $black
+    height: 60px
+    align-items: center
+    padding: 0 30px
+    .title
+        color: white
+        font:
+            family: $lato
+            size: 18px
+            weight: 500
+    ul
+        margin: 0
+        margin-left: auto
+        li
+            display: inline-flex
+            margin-left: 20px
+            a
+                color: white
+                text-decoration: none
+                font:
+                    family: $lato
+                    size: 14px
+
+#about
+    display: flex
+    position: relative
+    background: white
+    height: 500px
+    align-items: center
+    padding: 0 30px
+    justify-content: space-between
+    .hero
+        display: block
+        position: relative
+        width: 400px
+        height: 400px
+        background: url(../images/hero.jpg) $white1 no-repeat center center / cover
+        border-radius: 50%
+    p
+        width: 400px
+        text-align: justify
+        color: $grey
+        font:
+            family: $lato
+            size: 14px
+
+#skills
+    display: block
+    position: relative
+    background: $white2
+    height: 300px
+    padding: 50px 0
+    & > ul
+        display: block
+        position: relative
+        width: 80%
+        margin: 0 auto
+        padding: 0
+        & > li
+            display: inline-flex
+            position: relative
+            width: 40%
+            color: $blue
+            margin-bottom: 20px
+            &:nth-child(odd)
+                margin-right: 10%
+            font:
+                family: $lato
+                size: 14px
+
+#stack
+    display: block
+    position: relative
+    height: 250px
+    background: white
+    padding: 50px 0
+    ul
+        display: block
+        position: relative
+        margin: 0 auto
+        text-align: center
+        width: 50%
+        padding: 0
+        li
+            display: inline-block
+            position: relative
+            width: 33%
+            color: $blue
+            margin-bottom: 20px
+            font:
+                family: $lato
+                size: 14px
+
+#contact
+    display: block
+    position: relative
+    height: 150px
+    background: $white2
+    padding: 50px 0
+    span
+        display: block
+        position: relative
+        color: $blue
+        text-align: center
+        letter-spacing: 0.2em
+        font:
+            family: $lato
+            size: 24px
+            weight: bold
+
+.profiles
+    display: block
+    position: relative
+    height: 60px
+    background: white
+    ul
+        display: block
+        position: relative
+        margin: 0
+        padding: 0
+        top: 50%
+        transform: translateY(-50%)
+        text-align: center
+        li
+            display: inline-block
+            position: relative
+            padding: 0
+            margin-left: 20px
+            &:first-child
+                margin-left: 0
+        .li
+            width: 16px
+            height: 16px
+            background: url("../images/li.png") no-repeat center center / cover
+        .fb
+            width: 16px
+            height: 16px
+            background: url("../images/fb.png") no-repeat center center / cover
+        .tw
+            width: 16px
+            height: 16px
+            background: url("../images/tw.png") no-repeat center center / cover
+        .gh
+            width: 16px
+            height: 16px
+            background: url("../images/gh.png") no-repeat center center / cover
+
+footer
+    display: block
+    position: relative
+    height: 60px
+    background: $black
+    text-align: center
+    span
+        display: block
+        position: relative
+        top: 50%
+        transform: translateY(-50%)
+        color: white
+        font:
+            family: $lato
+            size: 14px
+    strong
+        color: red
